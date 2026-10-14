@@ -265,7 +265,7 @@
       flip(cover, COVER_MS, 3);
       later(() => book.classList.add('landed'), COVER_MS * 0.9);
       leaves.forEach((leaf, i) => later(() => flip(leaf, LEAF_MS, 10 + i), (reduce ? 0 : 520) + i * GAP));
-    }, 2000); // cover stays closed for 2 seconds
+    }, 3000); // cover stays closed for 2 seconds
   }
 
   let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(layout, 80); });
